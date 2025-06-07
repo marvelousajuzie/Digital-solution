@@ -32,7 +32,7 @@ a {
              max-width: 700px;
              margin: 0 auto;
              border: 1px solid #fff;
-            padding: 0.75rem 2rem;
+            padding: 0.75rem;
             height: 50px;
             background-color: #1a1a1a;
             border-radius: 50px;
@@ -503,8 +503,8 @@ a {
 
 .card {
   width: 100%;
-  max-width: 300px;
-  height: 400px;
+  max-width: 280px;
+  height: 350px;
   border-radius: 16px;
   position: relative;
   overflow: hidden;
@@ -521,7 +521,8 @@ a {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 80%;
-  height: 60%;
+  height: 40%;
+  
   background: radial-gradient(
     ellipse,
     rgba(255, 255, 255, 0.15) 0%,
@@ -530,6 +531,21 @@ a {
   );
   pointer-events: none;
   border-radius: 50%;
+}
+
+
+
+.card::after {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  right: -6px;
+  bottom: -6px;
+  border: 1px solid white;
+  border-radius: 22px; /* slightly more than .card to follow shape */
+  pointer-events: none;
+  z-index: 0;
 }
 
 .card-content {
@@ -1320,7 +1336,7 @@ a {
 
 
        
-/* Pricing Section */
+
 /* Pricing Section */
 .pricing {
   background-color: #000;
@@ -1373,7 +1389,7 @@ a {
 }
 
 .pricing-grid {
-  display: grid;
+  display: flex;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
@@ -1381,14 +1397,16 @@ a {
 
 .pricing-card {
   background: rgba(20, 20, 20, 0.4);
+  max-width: 330px;
   backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 20px;
+  border-radius: 18px;
   padding: 0;
   position: relative;
   overflow: hidden;
   height: auto;
-  min-height: 380px;
+  display: cen;
+   height: 370px;
   width: 100%;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
 }
