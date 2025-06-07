@@ -488,15 +488,18 @@ a {
     margin-bottom: 16px;
     font-weight: 600;
     text-align: left;
-  max-width: 600px;
+  max-width: 200px;
   margin: 0 auto 2rem 0;
 }
 
 .how-it-works .section-header h2 {
-    font-size: 48px;
+   font-size: clamp(2.5rem, 5vw, 3.5rem);
     font-weight: 700;
     line-height: 1.1;
     color: white;
+     max-width: 550px;
+     margin: 0;
+      text-align: left;
 }
 
 .cards-container {
@@ -508,8 +511,8 @@ a {
 
 .card {
   width: 100%;
-  max-width: 280px;
-  height: 350px;
+  max-width: 300px;
+  height: 400px;
   border-radius: 16px;
   position: relative;
   overflow: hidden;
@@ -695,6 +698,9 @@ a {
             font-weight: 400;
             margin-bottom: 20px;
             letter-spacing: 0.5px;
+             text-align: left;
+            max-width: 200px;
+            margin: 0 auto 2rem 0;
         }
 
         .section-header h2 {
@@ -703,6 +709,9 @@ a {
             line-height: 1.2;
             color: #fff;
             margin: 0;
+             text-align: left;
+            max-width: 550px;
+            margin: 0 auto 2rem 0;
         }
 
         .benefits-grid {
@@ -1296,6 +1305,12 @@ a {
   margin-bottom: 3rem;
 }
 
+
+.spacing-top-xl {
+  margin-top: 120px; /* or more, like 150px for a huge gap */
+}
+
+
 .section-label {
   font-size: 0.9rem;
   font-weight: 600;
@@ -1510,6 +1525,8 @@ a {
     font-weight: bold;
     line-height: 1.2;
     color: #ffffff;
+    text-align: center;
+    justify-content: center;
 }
 
 /* Testimonials masonry layout */
