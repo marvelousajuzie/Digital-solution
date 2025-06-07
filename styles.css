@@ -31,8 +31,8 @@ a {
             align-items: center;
              max-width: 700px;
              margin: 0 auto;
-             border: 1px solid #fff;
-            padding: 0.75rem;
+             border:0.5px solid #fff;
+            padding: 0.30rem;
             height: 50px;
             background-color: #1a1a1a;
             border-radius: 50px;
@@ -77,13 +77,14 @@ a {
 
         .cta-button {
             background-color: #FF4F01;
-             max-width: 130px;
+              width: auto;         
+            max-width: none;
             color: white;
             height: 40px;
-           padding: 0.58rem 1rem;     
-            border-radius: px;       
+          padding: 0.5rem 1rem;
+            border-radius: 8px;       
             font-size: 0.5rem; 
-            font-weight: 250;
+            font-weight: 300;
             flex-shrink: 0;
         }
 
@@ -1437,8 +1438,8 @@ a {
 }
 
 .cta-button {
-  width: 300px; 
-  max-width: 800px;
+    width: auto;          /* let content define width */
+    max-width: none;
   margin: 1.5rem auto; 
   display: block;
   background-color: #FF4F01;
@@ -2133,9 +2134,10 @@ Pricing cards
         .faq-number {
             width: 50px;
             height: 50px;
-            background: linear-gradient(135deg, #ff4500, #ff6b35);
+            background: #FF4F01;
             border-radius: 50%;
             display: flex;
+            border: 1px solid white;
             align-items: center;
             justify-content: center;
             font-size: 18px;
@@ -2147,7 +2149,7 @@ Pricing cards
         .faq-question {
             flex: 1;
             background: rgba(25, 25, 25, 0.9);
-            border: 1px solid rgba(60, 60, 60, 0.5);
+            border: 1px solid white;
             border-radius: 8px;
             padding: 18px 24px;
             font-size: 16px;
@@ -2160,7 +2162,7 @@ Pricing cards
             width: 50px;
             height: 50px;
             background: rgba(60, 60, 60, 0.8);
-            border: 1px solid rgba(80, 80, 80, 0.6);
+            border: 1px solid white;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -2185,7 +2187,7 @@ Pricing cards
 
         .show-more-btn {
             background: rgba(40, 40, 40, 0.9);
-            border: 1px solid rgba(80, 80, 80, 0.6);
+             border: 1px solid white;
             border-radius: 25px;
             padding: 14px 40px;
             font-size: 16px;
@@ -2266,5 +2268,320 @@ Pricing cards
             .show-more-btn {
                 padding: 12px 32px;
                 font-size: 14px;
+            }
+        }
+
+
+        .main-content {
+            min-height: calc(100vh - 200px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 40px 20px;
+        }
+
+        .luminous-logo {
+            font-size: 120px;
+            font-weight: 800;
+            letter-spacing: -2px;
+            text-transform: lowercase;
+            position: relative;
+            margin-bottom: 80px;
+        }
+
+        .luminous-logo .letter {
+            display: inline-block;
+            position: relative;
+        }
+
+        .luminous-logo .letter-l1,
+        .luminous-logo .letter-u,
+        .luminous-logo .letter-m1,
+        .luminous-logo .letter-n,
+        .luminous-logo .letter-o1,
+        .luminous-logo .letter-u2,
+        .luminous-logo .letter-s {
+            color: #2a2a2a;
+            text-shadow: 
+                0 0 0 #333,
+                inset 0 0 0 #333;
+            -webkit-text-stroke: 1px #444;
+        }
+
+        .luminous-logo .letter-i {
+            color: #ff4500;
+            position: relative;
+            text-shadow: 
+                0 0 30px rgba(255, 69, 0, 1),
+                0 0 60px rgba(255, 69, 0, 0.8),
+                0 0 100px rgba(255, 69, 0, 0.6),
+                0 0 150px rgba(255, 69, 0, 0.4);
+        }
+
+        .luminous-logo .letter-i::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 25px;
+            height: 25px;
+            background: radial-gradient(circle, #ff4500 0%, #ff6b35 40%, rgba(255, 69, 0, 0.6) 70%, transparent 100%);
+            border-radius: 50%;
+            box-shadow: 
+                0 0 40px rgba(255, 69, 0, 1),
+                0 0 80px rgba(255, 69, 0, 0.8),
+                0 0 120px rgba(255, 69, 0, 0.4);
+        }
+
+        .luminous-logo .letter-i::after {
+            content: '';
+            position: absolute;
+            top: -80px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(ellipse, rgba(255, 69, 0, 0.3) 0%, rgba(255, 69, 0, 0.15) 30%, transparent 70%);
+            border-radius: 50%;
+            z-index: -1;
+        }
+
+        .luminous-logo .letter-m2,
+        .luminous-logo .letter-o2 {
+            color: #2a2a2a;
+            -webkit-text-stroke: 1px #444;
+        }
+
+        /* Add orange glow effect that spans across m-i-n */
+        .luminous-logo::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 280px;
+            height: 160px;
+            background: radial-gradient(ellipse, 
+                rgba(255, 69, 0, 0.25) 0%, 
+                rgba(255, 69, 0, 0.15) 30%, 
+                rgba(255, 69, 0, 0.08) 50%, 
+                transparent 70%);
+            z-index: -1;
+            filter: blur(20px);
+        }
+
+        .footer {
+            background-color: #0a0a0a;
+            border-top: 1px solid #1a1a1a;
+            padding: 30px 0;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-left {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .footer-logo-icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, #ff4500, #ff6b35);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 18px;
+            color: white;
+        }
+
+        .footer-logo-text {
+            font-size: 20px;
+            font-weight: 600;
+            color: white;
+        }
+
+        .footer-divider {
+            width: 1px;
+            height: 30px;
+            background-color: #333;
+        }
+
+        .footer-info {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .footer-copyright {
+            font-size: 12px;
+            color: #666;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .copyright-symbol {
+            font-size: 10px;
+        }
+
+        .footer-resources {
+            font-size: 12px;
+            color: #888;
+        }
+
+        .footer-center {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .resources-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 4px;
+        }
+
+        .resources-link {
+            font-size: 12px;
+            color: #888;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .resources-link:hover {
+            color: #ff4500;
+        }
+
+        .footer-right {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .social-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .social-twitter {
+            background-color: #1a1a1a;
+            color: white;
+        }
+
+        .social-twitter:hover {
+            background-color: #1da1f2;
+            transform: translateY(-2px);
+        }
+
+        .social-linkedin {
+            background-color: #0077b5;
+            color: white;
+        }
+
+        .social-linkedin:hover {
+            background-color: #005885;
+            transform: translateY(-2px);
+        }
+
+        .social-facebook {
+            background-color: #1877f2;
+            color: white;
+        }
+
+        .social-facebook:hover {
+            background-color: #166fe5;
+            transform: translateY(-2px);
+        }
+
+        .social-tiktok {
+            background-color: #1a1a1a;
+            color: #ff0050;
+        }
+
+        .social-tiktok:hover {
+            background-color: #ff0050;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .social-instagram {
+            background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
+            color: white;
+        }
+
+        .social-instagram:hover {
+            background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(245, 133, 41, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            .luminous-logo {
+                font-size: 80px;
+                margin-bottom: 60px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                gap: 20px;
+                padding: 0 20px;
+            }
+
+            .footer-left {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+
+            .footer-right {
+                gap: 12px;
+            }
+
+            .social-icon {
+                width: 32px;
+                height: 32px;
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .luminous-logo {
+                font-size: 60px;
+            }
+
+            .footer-left {
+                gap: 12px;
+            }
+
+            .footer-logo-text {
+                font-size: 18px;
             }
         }
