@@ -1339,7 +1339,7 @@ a {
 }
 
 .highlight {
-  background-color: #ff5722;
+  background-color: #FF4F01;
   color: #fff;
   padding: 2px 8px;
   border-radius: 4px;
@@ -1364,6 +1364,21 @@ a {
   overflow: hidden;
   height: auto;
    height: 370px;
+  width: 100%;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.pricing-cardss {
+  background: rgba(20, 20, 20, 0.4);
+  max-width: 950px;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 18px;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  height: auto;
+   height: 337px;
   width: 100%;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
 }
@@ -1401,13 +1416,13 @@ a {
 }
 
 .package-name {
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   color: #ccc;
   margin-bottom: 0.5rem;
 }
 
 .price {
-  font-size: 1.5rem;
+  font-size: 1.rem;
   font-weight: 700;
   color: #fff;
   margin-bottom: 0.25rem;
@@ -1425,20 +1440,22 @@ a {
 }
 
 .cta-button {
-  width: calc(100% - 3rem);
-  margin: 1.5rem;
-  padding: 12px 24px;
-  background-color: #ff5722;
+  width: 300px; 
+  max-width: 800px;
+  margin: 1.5rem auto; 
+  display: block;
+  background-color: #FF4F01;
   color: #fff;
   border: none;
-  border-radius: 6px;
-  font-size: 0.9rem;
+  border-radius: 30px;
+  font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
   transition: background-color 0.3s ease;
   position: relative;
   z-index: 1;
 }
+
 
 .cta-button:hover {
   background-color: #e64a19;
@@ -1461,10 +1478,11 @@ a {
 }
 
 .check-icon {
-  color: #4caf50;
+  color:   #FF4F01;
   margin-right: 0.75rem;
   font-weight: bold;
   flex-shrink: 0;
+  font-size: 1.5rem;
 }
 
 .add-ons {
