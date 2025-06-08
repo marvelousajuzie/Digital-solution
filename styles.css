@@ -1083,32 +1083,31 @@ a {
     justify-content: center;
 }
 
-/* Updated pricing card with double border */
 .pricing-card {
     background: rgba(20, 20, 20, 0.4);
     max-width: 330px;
     backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.15); /* Inner border */
+    border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: 18px;
     padding: 0;
     position: relative;
-    overflow: visible; /* Changed from hidden to visible for outer border */
+    overflow: visible; 
     height: 370px;
     width: 100%;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Outer border with proper spacing */
+
 .pricing-card::before {
     content: "";
     position: absolute;
-    top: -6px; /* Creates 6px space between borders */
+    top: -6px; 
     left: -6px;
     right: -6px;
     bottom: -6px;
-    border: 1px solid rgba(255, 255, 255, 0.1); /* Outer border */
-    border-radius: 24px; /* Slightly larger radius for outer border */
+    border: 1px solid rgba(255, 255, 255, 0.1); 
+    border-radius: 24px; 
     z-index: -1;
     pointer-events: none;
     background: transparent;
@@ -1152,7 +1151,7 @@ a {
     padding: 0;
     position: relative;
     overflow: visible; /* Changed from hidden to visible */
-    height: 350px;
+    height: 250px;
     width: 100%;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
 }
@@ -1180,39 +1179,45 @@ a {
 }
 
 .package-name {
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     color: #ccc;
+    margin-bottom: 0.5rem;
+}
+
+/* Wrapper for the price container */
+.price-container {
+    display: flex;
+    align-items: baseline; /* Aligns text baselines */
+    gap: 0.5rem; /* Space between elements */
     margin-bottom: 0.5rem;
 }
 
 .price {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 700;
     color: #fff;
-    margin-bottom: 0.25rem;
 }
 
 .price-note {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     color: #999;
-    margin-bottom: 0.5rem;
 }
-
 .timeline {
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     color: #ccc;
 }
 
 .pricing .cta-button {
-    width: auto;
-    max-width: none;
-    margin: 1.5rem auto; 
+    width: 280px; 
+    max-width: 400px;
+    margin: 0.55rem auto;
+    padding: 0.6rem 1.0rem;
     display: block;
     background-color: #FF4F01;
     color: #fff;
     border: none;
     border-radius: 30px;
-    font-size: 1rem;
+    font-size: 0.85rem;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -1220,8 +1225,29 @@ a {
     z-index: 1;
 }
 
+.pricing .cta-buttonss {
+    width: 900px; 
+    max-width: 1200px;
+    margin: 0.55rem auto;
+    padding: 0.6rem 1.0rem;
+    display: block;
+    background-color: #FF4F01;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+
+
+
 .pricing .cta-button:hover {
-    background-color: #e64a19;
+    background-color: #FF4F01;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(255, 79, 1, 0.3);
 }
@@ -1236,8 +1262,8 @@ a {
 .features-list li {
     display: flex;
     align-items: flex-start;
-    margin-bottom: 0.75rem;
-    font-size: 0.85rem;
+    margin-bottom: 0.40rem;
+    font-size: 0.70rem;
     line-height: 1.4;
     color: rgba(255, 255, 255, 0.9);
 }
@@ -1249,6 +1275,7 @@ a {
     flex-shrink: 0;
     font-size: 1.5rem;
 }
+
 
 .add-ons {
     margin-top: 1rem;
@@ -1586,7 +1613,7 @@ a {
 }
 
 .testimonial-quote {
-    font-size: 0.5rem;
+    font-size: 1.1rem;
     color: #f0f0f0;
     line-height: 1.8;
     margin-bottom: 2rem;
@@ -1596,8 +1623,19 @@ a {
 .rating {
     display: flex;
     justify-content: center;
-    gap: 0.25rem;
+    gap: 0.30rem;
     margin-bottom: 1rem;
+}
+
+.star {
+    font-size: 1.5rem; /* Increase size */
+    color: #FF401F; /* Gold color */
+    transition: transform 0.2s ease;
+}
+
+
+.star:hover {
+    transform: scale(1.1);
 }
 
 .client-info {
@@ -1681,38 +1719,75 @@ a {
     width: 100%;
 }
 
+/* FAQ Number with double border */
 .faq-number {
     width: 50px;
     height: 50px;
     background: #FF4F01;
     border-radius: 50%;
     display: flex;
-    border: 1px solid white;
+    border: 1px solid white; /* Inner border */
     align-items: center;
     justify-content: center;
     font-size: 18px;
     font-weight: 700;
     color: white;
     flex-shrink: 0;
+    position: relative;
+    transition: all 0.3s ease;
 }
 
+/* Outer border for FAQ number */
+.faq-number::before {
+    content: "";
+    position: absolute;
+    top: -6px; /* Creates 6px space between borders */
+    left: -6px;
+    right: -6px;
+    bottom: -6px;
+    border: 1px solid rgba(255, 255, 255, 0.4); /* Outer border */
+    border-radius: 50%;
+    z-index: -1;
+    pointer-events: none;
+    background: transparent;
+}
+
+/* FAQ Question with double border */
 .faq-question {
     flex: 1;
     background:transparent;
-    border: 1px solid white;
+    border: 1px solid white; /* Inner border */
     border-radius: 8px;
     padding: 18px 24px;
     font-size: 16px;
     color: rgba(255, 255, 255, 0.9);
     line-height: 1.4;
     font-weight: 400;
+    position: relative;
+    transition: all 0.3s ease;
 }
 
+/* Outer border for FAQ question */
+.faq-question::before {
+    content: "";
+    position: absolute;
+    top: -6px; /* Creates 6px space between borders */
+    left: -6px;
+    right: -6px;
+    bottom: -6px;
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Outer border */
+    border-radius: 14px; /* Slightly larger radius for outer border */
+    z-index: -1;
+    pointer-events: none;
+    background: transparent;
+}
+
+/* FAQ Toggle with double border */
 .faq-toggle {
     width: 50px;
     height: 50px;
     background: rgba(60, 60, 60, 0.8);
-    border: 1px solid white;
+    border: 1px solid white; /* Inner border */
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -1723,21 +1798,56 @@ a {
     cursor: pointer;
     transition: all 0.3s ease;
     flex-shrink: 0;
+    position: relative;
+}
+
+/* Outer border for FAQ toggle */
+.faq-toggle::before {
+    content: "";
+    position: absolute;
+    top: -6px; /* Creates 6px space between borders */
+    left: -6px;
+    right: -6px;
+    bottom: -6px;
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Outer border */
+    border-radius: 50%;
+    z-index: -1;
+    pointer-events: none;
+    background: transparent;
+}
+
+/* Enhanced hover effects */
+.faq-number:hover::before {
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+.faq-question:hover {
+    transform: translateX(3px);
+}
+
+.faq-question:hover::before {
+    border-color: rgba(255, 255, 255, 0.5);
 }
 
 .faq-toggle:hover {
     background: rgba(80, 80, 80, 0.9);
-    border-color: rgba(100, 100, 100, 0.8);
+    border-color: rgba(255, 255, 255, 0.8);
     transform: scale(1.05);
+}
+
+.faq-toggle:hover::before {
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: scale(1.1);
 }
 
 .faq-footer {
     text-align: center;
 }
 
+/* Show more button with double border */
 .show-more-btn {
     background: rgba(40, 40, 40, 0.9);
-    border: 1px solid white;
+    border: 1px solid white; /* Inner border */
     border-radius: 25px;
     padding: 14px 40px;
     font-size: 16px;
@@ -1746,12 +1856,149 @@ a {
     cursor: pointer;
     transition: all 0.3s ease;
     font-family: inherit;
+    position: relative;
+}
+
+/* Outer border for show more button */
+.show-more-btn::before {
+    content: "";
+    position: absolute;
+    top: -6px; /* Creates 6px space between borders */
+    left: -6px;
+    right: -6px;
+    bottom: -6px;
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Outer border */
+    border-radius: 31px; /* Slightly larger radius for outer border */
+    z-index: -1;
+    pointer-events: none;
+    background: transparent;
 }
 
 .show-more-btn:hover {
     background: rgba(60, 60, 60, 0.9);
-    border-color: rgba(100, 100, 100, 0.8);
+    border-color: rgba(255, 255, 255, 0.8);
     transform: translateY(-2px);
+}
+
+.show-more-btn:hover::before {
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .faq-section {
+        padding: 40px 15px;
+        max-width: 100%;
+    }
+
+    .faq-header h2 {
+        font-size: 28px;
+        letter-spacing: 1.5px;
+    }
+
+    .faq-item {
+        gap: 15px;
+    }
+
+    /* Adjust spacing for mobile */
+    .faq-number::before,
+    .faq-toggle::before {
+        top: -5px;
+        left: -5px;
+        right: -5px;
+        bottom: -5px;
+    }
+
+    .faq-question::before {
+        top: -5px;
+        left: -5px;
+        right: -5px;
+        bottom: -5px;
+        border-radius: 13px;
+    }
+
+    .show-more-btn::before {
+        top: -5px;
+        left: -5px;
+        right: -5px;
+        bottom: -5px;
+        border-radius: 30px;
+    }
+
+    .faq-number {
+        width: 45px;
+        height: 45px;
+        font-size: 16px;
+    }
+
+    .faq-question {
+        padding: 16px 20px;
+        font-size: 15px;
+    }
+
+    .faq-toggle {
+        width: 45px;
+        height: 45px;
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 480px) {
+    .faq-header h2 {
+        font-size: 24px;
+        letter-spacing: 1px;
+    }
+
+    .faq-item {
+        gap: 12px;
+    }
+
+    /* Smaller spacing for very small screens */
+    .faq-number::before,
+    .faq-toggle::before {
+        top: -4px;
+        left: -4px;
+        right: -4px;
+        bottom: -4px;
+    }
+
+    .faq-question::before {
+        top: -4px;
+        left: -4px;
+        right: -4px;
+        bottom: -4px;
+        border-radius: 12px;
+    }
+
+    .show-more-btn::before {
+        top: -4px;
+        left: -4px;
+        right: -4px;
+        bottom: -4px;
+        border-radius: 29px;
+    }
+
+    .faq-number {
+        width: 40px;
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .faq-question {
+        padding: 14px 18px;
+        font-size: 14px;
+    }
+
+    .faq-toggle {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    .show-more-btn {
+        padding: 12px 32px;
+        font-size: 14px;
+    }
 }
 
 
