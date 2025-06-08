@@ -22,8 +22,9 @@ a {
 .navbar-container {
     max-width: 100px;
     margin: 0 auto;
-    padding: 2rem 1rem;
+    padding: 1rem 0.5rem;
 }
+
 
 .navbar {
     display: flex;
@@ -32,7 +33,7 @@ a {
     max-width: 700px;
     margin: 0 auto;
     border: 0.8px solid rgba(255, 255, 255, 0.3);
-    padding: 0.30rem;
+    padding: 0.20rem;
     height: 50px;
     background-color: #1a1a1a;
     border-radius: 50px;
@@ -80,10 +81,10 @@ a {
     width: auto;         
     max-width: none;
     color: white;
-    height: 40px;
+    height: 35px;
     padding: 0.5rem 1rem;
-    border-radius: 8px;       
-    font-size: 0.5rem; 
+    border-radius: 20px;       
+    font-size: 0.9rem; 
     font-weight: 300;
     flex-shrink: 0;
 }
@@ -140,7 +141,7 @@ a {
 .primary-button {
     background-color: #FF4F01;
     color: white;
-    padding: 0.8rem 1.5rem;
+    padding: 0.8rem 1.9rem;
     border-radius: 50px;
     font-weight: 500;
     transition: all 0.3s ease;
@@ -276,6 +277,10 @@ a {
     transform: translateY(-50%);
 }
 
+
+
+
+
 /* Services Section */
 .services {
     background-color: #000;
@@ -346,14 +351,18 @@ a {
 .arrow-icon {
     width: 60px;
     height: 60px;
-    border: 0.10px solid rgba(255, 255, 255, 0.3);
-    background-color: #FF5722;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: #FF4F01;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
     flex-shrink: 0;
+    background-image: url('img/Vector.svg'); /* replace with actual path */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 24px 24px;
 }
 
 .service-item:hover .arrow-icon {
@@ -361,12 +370,13 @@ a {
     transform: scale(1.05);
 }
 
-.arrow-icon svg {
-    width: 24px;
-    height: 60px;
-    stroke: white;
-    stroke-width: 4.5;
+
+.service-item:hover .arrow-icon {
+    background-color: #E64A19;
+    transform: scale(1.05);
 }
+
+
 
 /* How it Works Section - LEFT ALIGNED */
 .how-it-works {
@@ -776,12 +786,24 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-.icon-item svg {
-    width: 24px;
-    height: 24px;
+
+.icon-1 {
+    background-image: url('/img/figma.png');
 }
+
+.icon-2 {
+    background-image: url('/img/figma.png');
+}
+
+.icon-3 {
+    background-image: url('/img/figma.png');
+}
+
 
 .case-study-meta {
     border-top: 1px solid #333;
@@ -800,16 +822,19 @@ a {
     display: flex;
     gap: 8px;
     flex-wrap: wrap;
+    padding-bottom: 25px;
 }
 
 .industry-tag {
     background-color: #333;
     color: #fff;
-    padding: 6px 12px;
+    padding: 6px 20px 2px 20px;
+    margin-top: -10px;
     border-radius: 20px;
     font-size: 0.875rem;
     font-weight: 500;
 }
+
 
 /* Testimonials Section - CENTER ALIGNED */
 .testimonials {
@@ -1434,7 +1459,7 @@ a {
 
 /* PNG image as separate element behind 2nd card */
 .testimonial-box:nth-child(2)::after {
-    content: url('/path/to/your-background.png'); /* Replace with your PNG file path */
+    content: url('img/Frame.png'); /* Replace with your PNG file path */
     position: absolute;
     top: -50px;
     left: 50%;
@@ -1629,7 +1654,7 @@ a {
 
 .star {
     font-size: 1.5rem; /* Increase size */
-    color: #FF401F; /* Gold color */
+    color: #FF4F01; /* Gold color */
     transition: transform 0.2s ease;
 }
 
@@ -2020,94 +2045,78 @@ FOTTER */
 }
 
 .luminous-logo {
-    font-size: 120px;
-    font-weight: 800;
-    letter-spacing: -2px;
-    text-transform: lowercase;
-    position: relative;
-    margin-bottom: 80px;
-}
+            font-size: 120px;
+            font-weight: 800;
+            letter-spacing: -2px;
+            text-transform: lowercase;
+            position: relative;
+            margin-bottom: 80px;
+        }
 
-.luminous-logo .letter {
-    display: inline-block;
-    position: relative;
-}
+        .luminous-logo .letter {
+            display: inline-block;
+            position: relative;
+        }
 
-.luminous-logo .letter-l1,
-.luminous-logo .letter-u,
-.luminous-logo .letter-m1,
-.luminous-logo .letter-n,
-.luminous-logo .letter-o1,
-.luminous-logo .letter-u2,
-.luminous-logo .letter-s {
-    color: #2a2a2a;
-    text-shadow: 
-        0 0 0 #333,
-        inset 0 0 0 #333;
-    -webkit-text-stroke: 1px #444;
-}
+        .luminous-logo .letter-l1,
+        .luminous-logo .letter-u,
+        .luminous-logo .letter-m1,
+        .luminous-logo .letter-i,
+        .luminous-logo .letter-n,
+        .luminous-logo .letter-o1,
+        .luminous-logo .letter-u2,
+        .luminous-logo .letter-s {
+            color: #2a2a2a;
+            -webkit-text-stroke: 1px white;
+            border: 1px white;
+        }
 
-.luminous-logo .letter-i {
-    color: #ff4500;
-    position: relative;
-    text-shadow: 
-        0 0 30px rgba(255, 69, 0, 1),
-        0 0 60px rgba(255, 69, 0, 0.8),
-        0 0 100px rgba(255, 69, 0, 0.6),
-        0 0 150px rgba(255, 69, 0, 0.4);
-}
+        .luminous-logo .letter-m2,
+        .luminous-logo .letter-o2 {
+            color: #2a2a2a;
+            -webkit-text-stroke: 1px #444;
+        }
 
-.luminous-logo .letter-i::before {
-    content: '';
-    position: absolute;
-    top: -20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 25px;
-    height: 25px;
-    background: radial-gradient(circle, #ff4500 0%, #ff6b35 40%, rgba(255, 69, 0, 0.6) 70%, transparent 100%);
-    border-radius: 50%;
-    box-shadow: 
-        0 0 40px rgba(255, 69, 0, 1),
-        0 0 80px rgba(255, 69, 0, 0.8),
-        0 0 120px rgba(255, 69, 0, 0.4);
-}
+        /* PNG image behind the 'i' letter only */
+        .luminous-logo .letter-i::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100px;
+            height: 100px; 
+            background: 
+        radial-gradient(
+            circle,
+            rgba(255, 255, 255, 0.05) 0%,
+            rgba(255, 255, 255, 0.02) 40%,
+            rgba(255, 255, 255, 0) 70%
+        ),
+        url('img/Frame.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            z-index: -1; /* Behind the letter but above the main shadow */
+        }
 
-.luminous-logo .letter-i::after {
-    content: '';
-    position: absolute;
-    top: -80px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 200px;
-    height: 200px;
-    background: radial-gradient(ellipse, rgba(255, 69, 0, 0.3) 0%, rgba(255, 69, 0, 0.15) 30%, transparent 70%);
-    border-radius: 50%;
-    z-index: -1;
-}
-
-.luminous-logo .letter-m2,
-.luminous-logo .letter-o2 {
-    color: #2a2a2a;
-    -webkit-text-stroke: 1px #444;
-}
-
-.luminous-logo::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 280px;
-    height: 160px;
-    background: radial-gradient(ellipse, 
-        rgba(255, 69, 0, 0.25) 0%, 
-        rgba(255, 69, 0, 0.15) 30%, 
-        rgba(255, 69, 0, 0.08) 50%, 
-        transparent 70%);
-    z-index: -1;
-    filter: blur(20px);
-}
+        /* Main shadow/eclipse effect */
+        .luminous-logo::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 280px;
+            height: 160px;
+            background: radial-gradient(ellipse, 
+                rgba(255, 69, 0, 0.25) 0%, 
+                rgba(255, 69, 0, 0.15) 30%, 
+                rgba(255, 69, 0, 0.08) 50%, 
+                transparent 70%);
+            z-index: -2; /* Behind everything */
+            filter: blur(20px);
+        }
 
 /* Footer */
 .footer {
@@ -2139,17 +2148,19 @@ FOTTER */
 }
 
 .footer-logo-icon {
-    width: 32px;
-    height: 32px;
-    background: linear-gradient(135deg, #ff4500, #ff6b35);
-    border-radius: 6px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    font-size: 18px;
-    color: white;
-}
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, #ff4500, #ff6b35);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+           
+            background-image: url('img/Frame.png'); 
+            background-size: 35px 35px; 
+            background-repeat: no-repeat;
+            background-position: center;
+        }
 
 .footer-logo-text {
     font-size: 20px;
