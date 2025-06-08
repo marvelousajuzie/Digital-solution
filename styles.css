@@ -51,9 +51,13 @@ a {
 .logo-square {
     width: 20px;
     height: 20px;
-    background-color: #FF4F01;
-    border-radius: 3px;
+    background-image: url(img/Frame.png); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 3px; 
 }
+
 
 .nav-links {
     display: flex;
@@ -776,13 +780,13 @@ a {
 
 .case-study-icons {
     display: flex;
-    gap: 8px;
+    gap: 0px;
     margin-bottom: 20px;
 }
 
 .icon-item {
-    width: 32px;
-    height: 32px;
+    width: 40px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -807,16 +811,20 @@ a {
 
 .case-study-meta {
     border-top: 1px solid #333;
-    padding-top: 16px;
-    padding-bottom: 25px;
+    margin-top: -35px;  /* Move the entire section (and border) up */
+    padding-top: 0;     /* Optional: reset padding if needed */
+    padding-bottom: 40px;
 }
+
 
 .meta-label {
     font-size: 0.875rem;
     color: #999;
-    margin-bottom: 8px;
+    margin-bottom: 20px;
+    margin-top: 4px; /* Moves it up */
     display: block;
 }
+
 
 .industry-tags {
     display: flex;
@@ -829,7 +837,7 @@ a {
     background-color: #333;
     color: #fff;
     padding: 6px 20px 2px 20px;
-    margin-top: -10px;
+    margin-top: -20px;
     border-radius: 20px;
     font-size: 0.875rem;
     font-weight: 500;
