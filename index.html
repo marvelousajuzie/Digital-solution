@@ -20,7 +20,23 @@
             <a href="#" class="nav-link">Case Studies</a>
         </div>
         <a href="#" class="cta-button">Book a call</a>
+        
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu">
+        <a href="#" class="nav-link">How it works</a>
+        <a href="#" class="nav-link">Pricing</a>
+        <a href="#" class="nav-link">FAQs</a>
+        <a href="#" class="nav-link">Case Studies</a>
+        <a href="#" class="cta-button">Book a call</a>
+    </div>
 </header>
 
     <!-- Hero Section -->
@@ -216,8 +232,6 @@
                     </div>
                 </div>
 
-
-
                 
                 <div class="case-study-card">
                     <div class="case-study-image">
@@ -245,8 +259,6 @@
                     </div>
                 </div>
 
-
-
                 <div class="case-study-card">
                     <div class="case-study-image">
                         <div class="placeholder-pattern"></div>
@@ -272,16 +284,10 @@
                         </div>
                     </div>
                 </div>
-
-
-
 
                 
 
             </div>
-
-
-
 
         </div>
 
@@ -372,8 +378,6 @@
             </div>
         </div>
 
-
-
         <div class="testimonial-card">
             <div class="testimonial-overlay"></div>
             <div class="testimonial-content">
@@ -420,9 +424,6 @@
                 </svg>
             </div>
         </div>
-
-
-
 
                 <div class="testimonial-card">
             <div class="testimonial-overlay"></div>
@@ -447,10 +448,6 @@
             </div>
         </div>
 
-
-
-
-
         <div class="testimonial-card">
             <div class="testimonial-overlay"></div>
             <div class="testimonial-content">
@@ -474,9 +471,6 @@
             </div>
         </div>
 
-
-
-
         <div class="testimonial-card">
             <div class="testimonial-overlay"></div>
             <div class="testimonial-content">
@@ -498,8 +492,6 @@
                     <polygon points="8,5 19,12 8,19" fill="white"/>
                 </svg>
             </div>
-
-
 
             
         </div>
@@ -593,8 +585,6 @@
         </div>
     </section>
 
-
-
     <!-- Benefits Section -->
     <section class="benefits">
         <div class="benefits-container">
@@ -655,8 +645,6 @@
             </div>
         </div>
     </section>
-
-
 
     <!-- Loved by Clients Section -->
               <section class="loved-by-clients">
@@ -852,8 +840,6 @@
                         </div>
                         <div class="timeline">Timeline: 6-10 weeks</div>
 
-
-
                          <button class="cta-button">Secure your spot</button>
                     
                     <ul class="features-list">
@@ -915,8 +901,6 @@
                 </div>
             </div>
         </div>
-
-
 
                   <div class="service-category spacing-top-xl"></div>
                   <div class="service-category">
@@ -1147,8 +1131,6 @@
                           </div>
                       </div>
                   </div>
-
-
 
                   <div class="service-category spacing-top-xl"></div>
                   <div class="service-category">
@@ -1440,13 +1422,6 @@
         </div>
     </section>
 
-
-
-
-
-
-
-
 <section class="faq-section">
         <div class="faq-container">
             <div class="faq-header">
@@ -1490,10 +1465,6 @@
             </div>
         </div>
     </section>
-
-
-
-
 
      <div class="main-content">
         <div class="luminous-logo">
@@ -1555,3 +1526,55 @@
    
 </body>
 </html>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const body = document.body;
+    const mobileMenuLinks = document.querySelectorAll('.mobile-menu .nav-link, .mobile-menu .cta-button');
+
+    // Toggle mobile
+    mobileMenuToggle.addEventListener('click', function() {
+        mobileMenuToggle.classList.toggle('active');
+        mobileMenu.classList.toggle('active');
+        body.classList.toggle('menu-open');
+    });
+
+    // Close mobile menu when clicking on links
+    mobileMenuLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            mobileMenuToggle.classList.remove('active');
+            mobileMenu.classList.remove('active');
+            body.classList.remove('menu-open');
+        });
+    });
+
+    // Close mobile menu when clicking outside
+    mobileMenu.addEventListener('click', function(e) {
+        if (e.target === mobileMenu) {
+            mobileMenuToggle.classList.remove('active');
+            mobileMenu.classList.remove('active');
+            body.classList.remove('menu-open');
+        }
+    });
+
+    // Close mobile menu on escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+            mobileMenuToggle.classList.remove('active');
+            mobileMenu.classList.remove('active');
+            body.classList.remove('menu-open');
+        }
+    });
+
+    // Handle window resize
+    window.addEventListener('resize', function() {
+        if (window.innerWidth >= 768) {
+            mobileMenuToggle.classList.remove('active');
+            mobileMenu.classList.remove('active');
+            body.classList.remove('menu-open');
+        }
+    });
+});
+</script>
